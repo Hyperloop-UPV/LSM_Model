@@ -1,0 +1,1 @@
+MW_GNU_ARM_STM32_PATH = bin

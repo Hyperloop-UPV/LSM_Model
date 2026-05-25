@@ -1,0 +1,41 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   3 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "signo"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Discrete_FOC_LSM:148:72-77"\
+      Dimensions   [1,3]\
+    }\
+    ChartData {\
+      Name         "t_inicio"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Discrete_FOC_LSM:148:170-178"\
+      Dimensions   [1,3]\
+    }\
+    ChartData {\
+      Name         "frecuencia_acc"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Discrete_FOC_LSM:148:253-267"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
