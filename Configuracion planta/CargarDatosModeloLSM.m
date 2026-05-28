@@ -1,5 +1,5 @@
 %% Add to workspace angle, force, resistance and polar fraction
-load("Modelo LSM/Configuracion planta/CargaDatosLSM.mat");
+load("LSM_Model/Configuracion planta/CargaDatosLSM.mat");
 
 %% Add to workspace drag data
 real_airgap = 14.5;
@@ -27,6 +27,7 @@ initial_speed = 1; % 1 m/s
 Distance_between_EMS = 0.768; % H9 value
 speetec_init = 1 - 0.0925; % This values might be changed, although are not really important
 speetec_end = 4 + 2*Distance_between_EMS + 0.5; % When the ems are not inside the booster 
+init_angle_from_speetec = 4.565126;
 %It will still do the pi when there is no ems in the booster, during some
 %few milliseconds.
 %speetec_end = 4 + 0.0925;
