@@ -7,9 +7,9 @@
  *
  * Code generation for model "Speedgoat_Plant_Model".
  *
- * Model version              : 1.11
+ * Model version              : 1.12
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C++ source code generated on : Sun May 31 18:10:54 2026
+ * C++ source code generated on : Mon Jun  1 16:45:04 2026
  *
  * Target selection: speedgoat.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -242,16 +242,18 @@ void Speedgoat_Plant_Model_initialize(void)
           &Speedgoat_Plant_Model_M->NonInlinedSFcns.Sfcn0.outputPortInfo[0]);
         ssSetPortInfoForOutputs(rts,
           &Speedgoat_Plant_Model_M->NonInlinedSFcns.Sfcn0.outputPortInfo[0]);
-        _ssSetNumOutputPorts(rts, 2);
+        _ssSetNumOutputPorts(rts, 3);
         _ssSetPortInfo2ForOutputUnits(rts,
           &Speedgoat_Plant_Model_M->NonInlinedSFcns.Sfcn0.outputPortUnits[0]);
         ssSetOutputPortUnit(rts, 0, 0);
         ssSetOutputPortUnit(rts, 1, 0);
+        ssSetOutputPortUnit(rts, 2, 0);
         _ssSetPortInfo2ForOutputCoSimAttribute(rts,
           &Speedgoat_Plant_Model_M->NonInlinedSFcns.Sfcn0.outputPortCoSimAttribute
           [0]);
         ssSetOutputPortIsContinuousQuantity(rts, 0, 0);
         ssSetOutputPortIsContinuousQuantity(rts, 1, 0);
+        ssSetOutputPortIsContinuousQuantity(rts, 2, 0);
 
         /* port 0 */
         {
@@ -267,6 +269,14 @@ void Speedgoat_Plant_Model_initialize(void)
           ssSetOutputPortWidthAsInt(rts, 1, 1);
           ssSetOutputPortSignal(rts, 1, ((real_T *)
             &Speedgoat_Plant_Model_B.PWMCapture1_o2));
+        }
+
+        /* port 2 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 2, 1);
+          ssSetOutputPortWidthAsInt(rts, 2, 1);
+          ssSetOutputPortSignal(rts, 2, ((real_T *)
+            &Speedgoat_Plant_Model_B.PWMCapture1_o3));
         }
       }
 
@@ -351,8 +361,10 @@ void Speedgoat_Plant_Model_initialize(void)
       /* Update connectivity flags for each port */
       _ssSetOutputPortConnected(rts, 0, 1);
       _ssSetOutputPortConnected(rts, 1, 1);
+      _ssSetOutputPortConnected(rts, 2, 1);
       _ssSetOutputPortBeingMerged(rts, 0, 0);
       _ssSetOutputPortBeingMerged(rts, 1, 0);
+      _ssSetOutputPortBeingMerged(rts, 2, 0);
 
       /* Update the BufferDstPort flags for each input port */
     }

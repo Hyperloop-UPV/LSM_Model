@@ -7,9 +7,9 @@
  *
  * Code generation for model "Speedgoat_Plant_Model".
  *
- * Model version              : 1.11
+ * Model version              : 1.12
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C++ source code generated on : Sun May 31 18:10:54 2026
+ * C++ source code generated on : Mon Jun  1 16:45:04 2026
  *
  * Target selection: speedgoat.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -134,14 +134,23 @@ extern "C"
 struct B_Speedgoat_Plant_Model_T {
   real_T PWMCapture1_o1;               /* '<Root>/PWM Capture1' */
   real_T PWMCapture1_o2;               /* '<Root>/PWM Capture1' */
+  real_T PWMCapture1_o3;               /* '<Root>/PWM Capture1' */
 };
 
 /* Block states (default storage) for system '<Root>' */
 struct DW_Speedgoat_Plant_Model_T {
   void *PWMCapture1_PWORK[4];          /* '<Root>/PWM Capture1' */
   struct {
-    void *LoggedData[2];
+    void *LoggedData;
   } Scope7_PWORK;                      /* '<Root>/Scope7' */
+
+  struct {
+    void *LoggedData;
+  } Scope8_PWORK;                      /* '<Root>/Scope8' */
+
+  struct {
+    void *LoggedData;
+  } Scope9_PWORK;                      /* '<Root>/Scope9' */
 
   void *Setup_PWORK[6];                /* '<Root>/Setup' */
   int_T Setup_IWORK;                   /* '<Root>/Setup' */
@@ -177,9 +186,9 @@ struct tag_RTM_Speedgoat_Plant_Model_T {
       time_T sfcnPeriod[1];
       time_T sfcnOffset[1];
       int_T sfcnTsMap[1];
-      struct _ssPortOutputs outputPortInfo[2];
-      struct _ssOutPortUnit outputPortUnits[2];
-      struct _ssOutPortCoSimAttribute outputPortCoSimAttribute[2];
+      struct _ssPortOutputs outputPortInfo[3];
+      struct _ssOutPortUnit outputPortUnits[3];
+      struct _ssOutPortCoSimAttribute outputPortCoSimAttribute[3];
       uint_T attribs[15];
       mxArray *params[15];
       struct _ssDWorkRecord dWork[1];

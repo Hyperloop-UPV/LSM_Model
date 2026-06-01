@@ -7,9 +7,9 @@
  *
  * Code generation for model "Speedgoat_Plant_Model".
  *
- * Model version              : 1.11
+ * Model version              : 1.12
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C++ source code generated on : Sun May 31 18:10:54 2026
+ * C++ source code generated on : Mon Jun  1 16:45:04 2026
  *
  * Target selection: speedgoat.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

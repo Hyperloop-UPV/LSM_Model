@@ -61,7 +61,7 @@ Speedgoat_Plant_Model_cal_type Speedgoat_Plant_Model_cal_impl = {
   /* Expression: showDC16
    * Referenced by: '<Root>/PWM Capture1'
    */
-  0.0,
+  1.0,
 
   /* Computed Parameter: PWMCapture1_P7_Size
    * Referenced by: '<Root>/PWM Capture1'
