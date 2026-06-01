@@ -41,4 +41,9 @@ speed_reference = 25; % km/h
 speed_reference_ms = speed_reference/3.6;
 
 
+%Speedgoat
+range_sensor_current = 500;
+encoder_positions = 2000;
+
+
 
