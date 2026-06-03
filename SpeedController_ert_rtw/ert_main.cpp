@@ -5,59 +5,33 @@
 //
 // File: ert_main.cpp
 //
-// Code generated for Simulink model 'Current_Controller'.
+// Code generated for Simulink model 'SpeedController'.
 //
-// Model version                  : 1.19
+// Model version                  : 1.15
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Wed Jun  3 13:06:34 2026
+// C/C++ source code generated on : Wed Jun  3 13:09:37 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
-// Code generation objectives:
-//    1. Execution efficiency
-//    2. RAM efficiency
+// Code generation objective: Execution efficiency
 // Validation result: Not run
 //
 #include <stdio.h>              // This example main program uses printf/fflush
-#include "Current_Controller.h"        // Model header file
+#include "SpeedController.h"           // Model header file
 
-static Current_Controller rtObj;       // Instance of model class
+static SpeedController SpeedController_Obj;// Instance of model class
 
-// '<Root>/Iabc'
-static std::array<double, 3> arg_Iabc{ { 0.0, 0.0, 0.0 } };
+// '<Root>/Speed_ref'
+static double arg_Speed_ref{ 0.0 };
 
-// '<Root>/Init_Angle'
-static double arg_Init_Angle{ 0.0 };
+// '<Root>/Real_Speed'
+static double arg_Real_Speed{ 0.0 };
+
+// '<Root>/Speed_Error'
+static double arg_Speed_Error;
 
 // '<Root>/Iq_ref'
-static double arg_Iq_ref{ 0.0 };
-
-// '<Root>/pos_speetec'
-static double arg_pos_speetec{ 0.0 };
-
-// '<Root>/Vabc'
-static std::array<double, 3> arg_Vabc;
-
-// '<Root>/ELE angle'
-static double arg_ELE_angle;
-
-// '<Root>/Vd'
-static double arg_Vd;
-
-// '<Root>/Vq'
-static double arg_Vq;
-
-// '<Root>/Iq_error'
-static double arg_Iq_error;
-
-// '<Root>/Id_error'
-static double arg_Id_error;
-
-// '<Root>/Iq_measured'
-static double arg_Iq_measured;
-
-// '<Root>/Id_measured'
-static double arg_Id_measured;
+static double arg_Iq_ref;
 
 //
 // Associating rt_OneStep with a real-time clock or interrupt service routine
@@ -89,9 +63,8 @@ void rt_OneStep(void)
   // Set model inputs here
 
   // Step the model
-  rtObj.step(&arg_Iabc[0], arg_Init_Angle, arg_Iq_ref, arg_pos_speetec,
-             &arg_Vabc[0], arg_ELE_angle, arg_Vd, arg_Vq, arg_Iq_error,
-             arg_Id_error, arg_Iq_measured, arg_Id_measured);
+  SpeedController_Obj.step(arg_Speed_Error, arg_Speed_ref, arg_Real_Speed,
+    arg_Iq_ref);
 
   // Get model outputs here
 
@@ -116,10 +89,10 @@ int main(int argc, const char *argv[])
   (void)(argv);
 
   // Initialize model
-  rtObj.initialize();
+  SpeedController_Obj.initialize();
 
   // Attach rt_OneStep to a timer or interrupt service routine with
-  //  period 0.0002 seconds (base rate of the model) here.
+  //  period 0.001 seconds (base rate of the model) here.
   //  The call syntax for rt_OneStep is
   //
   //   rt_OneStep();
@@ -137,7 +110,7 @@ int main(int argc, const char *argv[])
 
 
   // Terminate model
-  rtObj.terminate();
+  SpeedController_Obj.terminate();
   return 0;
 }
 
