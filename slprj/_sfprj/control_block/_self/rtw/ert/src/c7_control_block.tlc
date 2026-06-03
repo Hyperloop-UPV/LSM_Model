@@ -1,0 +1,62 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "tiempo"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:112-118"\
+    }\
+    ChartData {\
+      Name         "signo"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:514-519"\
+      Dimensions   [1,3]\
+    }\
+    ChartData {\
+      Name         "t_inicio"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:574-582"\
+      Dimensions   [1,3]\
+    }\
+    ChartData {\
+      Name         "frecuencia_acc"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:643-657"\
+    }\
+    ChartData {\
+      Name         "antiguo_maximo"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:1771-1785"\
+    }\
+    ChartData {\
+      Name         "t_maximo"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "control_block:501:1852-1860"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -40,7 +40,9 @@ speetec_offset = 0.174 + 0.116 + 0.0925; % Distance from EMS to Begin Vehicle + 
 speed_reference = 25; % km/h
 speed_reference_ms = speed_reference/3.6;
 
-
+%Speed
+Kp_speed = 6;
+Ki_speed = 15;
 %Speedgoat
 range_sensor_current = 500;
 encoder_positions = 2000;
