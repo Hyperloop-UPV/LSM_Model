@@ -1,0 +1,6 @@
+This file is manifest for code generated from model 'Current_Controller'.
+/home/osganig/Hyperloop/Traction-H9-main/LSM_Model/Current_Controller_ert_rtw/Current_Controller.cpp
+/home/osganig/Hyperloop/Traction-H9-main/LSM_Model/Current_Controller_ert_rtw/ert_main.cpp
+/home/osganig/Hyperloop/Traction-H9-main/LSM_Model/Current_Controller_ert_rtw/Current_Controller.h
+/home/osganig/Hyperloop/Traction-H9-main/LSM_Model/Current_Controller
+/home/osganig/Hyperloop/Traction-H9-main/LSM_Model/Current_Controller_ert_rtw/Current_Controller_manifest.txt
