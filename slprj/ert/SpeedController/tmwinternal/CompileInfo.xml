@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2025a http://schema.mathworks.com/mf0/slexec_mm_sto/R2025a_202404151030 http://schema.mathworks.com/mf0/sltp_mm/R2025a_202406271200">
-  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="7d51e51e-731e-41d1-96f2-0e26dbb1d132">
-    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="6646db7e-e285-4544-a8fb-bf06b42b9b0e">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="7712f896-54e6-4ed3-9521-0abfcafadb7d">
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="8664a27d-4726-49ae-9c85-23e0ea7f8b73">
       <isSingleInstance>true</isSingleInstance>
       <modelName>SpeedController</modelName>
       <modelPath>SpeedController</modelPath>
@@ -9,8 +9,8 @@
     <compDerivCacheNeedsReset>false</compDerivCacheNeedsReset>
     <compZcCacheNeedsReset>false</compZcCacheNeedsReset>
     <compiledTFinal>10.0</compiledTFinal>
-    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="d8ac80c7-554b-468c-8342-c07211d16e75">
-      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="a8d8fd0b-fe36-4080-bcbb-0acd68ca19a4">
+    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="9bb1d3bf-8a7e-4661-b976-d82a01c6a921">
+      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="6e58aec3-5514-4618-bfce-f241cf158973">
         <includeAllSections>true</includeAllSections>
         <sourceName>base workspace</sourceName>
         <type>BaseWorkspace</type>
@@ -26,7 +26,7 @@
     <hasBwsAccessed>true</hasBwsAccessed>
     <hasInlineVariantBlock>true</hasInlineVariantBlock>
     <hasVariantModelOrSubsystem>true</hasVariantModelOrSubsystem>
-    <inports type="ModelRefInfoRepo.InportInformation" uuid="161b8534-e2e7-43a9-b628-670c4c7400d4">
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="fcb65598-0c9e-46a0-9654-2788afc0fd83">
       <isNotDerivPort>true</isNotDerivPort>
       <designMax>inf</designMax>
       <designMin>-inf</designMin>
@@ -40,10 +40,10 @@
       </rateInfos>
       <resolvedSignalObject></resolvedSignalObject>
       <trueHiers>0</trueHiers>
-      <executionInterface type="ModelRefInfoRepo.InputExecutionInterface" uuid="7ed92cc5-389d-4959-b4b3-f95542755a99"/>
-      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="11ab6386-fa5e-4f6d-92ca-7d6547ed1538"/>
+      <executionInterface type="ModelRefInfoRepo.InputExecutionInterface" uuid="6d6fea67-dc56-4868-952a-046789cf6a45"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="69da5b80-471e-4246-8b84-ff023255434d"/>
     </inports>
-    <inports type="ModelRefInfoRepo.InportInformation" uuid="17c16754-1760-4ddf-a935-12f16dff8418">
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="9cdc05d4-6372-418d-98ac-503b3e6bee59">
       <isNotDerivPort>true</isNotDerivPort>
       <designMax>inf</designMax>
       <designMin>-inf</designMin>
@@ -58,10 +58,11 @@
       </rateInfos>
       <resolvedSignalObject></resolvedSignalObject>
       <trueHiers>0</trueHiers>
-      <executionInterface type="ModelRefInfoRepo.InputExecutionInterface" uuid="72039eb3-92bf-4a5b-93c7-8f11f0857019"/>
-      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="9c17f934-c17b-4717-9064-7a1944265c87"/>
+      <executionInterface type="ModelRefInfoRepo.InputExecutionInterface" uuid="e0594de6-cec8-4e97-8e82-08413e393d28"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="b06b8515-2dad-42ae-a6fb-8847df7d29e0"/>
     </inports>
     <isBdInSimModeForSimCodegenVariants>false</isBdInSimModeForSimCodegenVariants>
+    <isInlineParamsOn>true</isInlineParamsOn>
     <isNumAllowedInstancesOne>true</isNumAllowedInstancesOne>
     <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
     <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
@@ -82,7 +83,7 @@
     <origOutportBusOutputAsStruct>false</origOutportBusOutputAsStruct>
     <origOutportBusType></origOutportBusType>
     <origOutportBusType></origOutportBusType>
-    <outports type="ModelRefInfoRepo.OutportInformation" uuid="2d84c7c3-74b9-4cc6-aec2-f26f87932208">
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="e613f545-5941-4375-96bd-5088c3bd0c00">
       <designMax>inf</designMax>
       <designMin>-inf</designMin>
       <indexType>2</indexType>
@@ -95,10 +96,10 @@
       </rateInfos>
       <resolvedSignalObject></resolvedSignalObject>
       <trueHiers>0</trueHiers>
-      <executionInterface type="ModelRefInfoRepo.OutputExecutionInterface" uuid="d0a7d6a2-8f6b-41c0-abde-114231f3c123"/>
-      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="c2e766f2-8247-45c9-b0e1-c5b8fd301716"/>
+      <executionInterface type="ModelRefInfoRepo.OutputExecutionInterface" uuid="2b70ca89-f6cb-40b8-b11a-b151efa78257"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="96c0e3e2-5ba5-4bf0-98a0-097f2a1026fa"/>
     </outports>
-    <outports type="ModelRefInfoRepo.OutportInformation" uuid="616304cd-52c7-4e8d-93db-f4f035af0ac9">
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="d6070d3e-65b9-4728-b2e4-392d5afdbf81">
       <designMax>inf</designMax>
       <designMin>-inf</designMin>
       <indexType>2</indexType>
@@ -112,8 +113,8 @@
       </rateInfos>
       <resolvedSignalObject></resolvedSignalObject>
       <trueHiers>0</trueHiers>
-      <executionInterface type="ModelRefInfoRepo.OutputExecutionInterface" uuid="50130235-764e-46b2-b1d3-3bef1746fa52"/>
-      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="fd154e6b-396e-4a6d-bb75-f0fb1ea366ff"/>
+      <executionInterface type="ModelRefInfoRepo.OutputExecutionInterface" uuid="2c816dc4-72c3-4954-8a8c-b45269a86c10"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="d4112942-b59b-4aaf-bd17-22664377d8ad"/>
     </outports>
     <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
       <compiled>true</compiled>
@@ -126,33 +127,33 @@
     <solverStatusFlags>323</solverStatusFlags>
     <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2025a_202404151030&quot;&gt;
-  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;6114eb4b-24e4-41ab-a1e4-af2367e9cf27&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;ca15ae15-31f7-49d3-a70a-e70ae45e0f6d&quot;&gt;
     &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
     &lt;identifier&gt;SpeedController&lt;/identifier&gt;
-    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;3db742bb-c70b-4630-9767-ace6cbfbaf02&quot;&gt;
-      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;36ea6dcc-1cb4-4531-a351-b4a289cf42ee&quot;&gt;
+    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;24b6a769-3aee-4dd2-a16f-20f9ee1fc7fa&quot;&gt;
+      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;b54e5fc6-cfdd-4e40-a3f5-44ac54c55c1b&quot;&gt;
         &lt;computedFundamentalDiscretePeriod&gt;.001&lt;/computedFundamentalDiscretePeriod&gt;
-        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;97074807-e620-45cc-982d-57c1f39c7d26&quot;/&gt;
+        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;3f2c20d2-31ce-48ca-998e-b83009cd5643&quot;/&gt;
         &lt;isDefaultTimer&gt;true&lt;/isDefaultTimer&gt;
         &lt;resolution&gt;.001&lt;/resolution&gt;
         &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
         &lt;identifier&gt;SpeedController::defaultTimer&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;97074807-e620-45cc-982d-57c1f39c7d26&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;3f2c20d2-31ce-48ca-998e-b83009cd5643&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;SpeedController::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;4feb7448-654f-4eb6-bf8b-b869834f8e6a&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d726a239-434a-440d-a423-a48487784ffc&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;bdef90e7-97ec-429b-a7f9-2062488392b6&quot;&gt;
+        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;3331adac-2f50-4920-9d0b-ab6936f7f0c0&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;SpeedController::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;91a97118-7784-4538-ab0e-00a3223327f7&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;78e02e68-57c1-4c8c-9be8-d40f343d9f78&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -160,16 +161,16 @@
       &lt;/clocks&gt;
       &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
     &lt;/clockRegistry&gt;
-    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;a1bab15c-1186-4824-990c-664445d1b738&quot;&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;f5e80cf9-db0d-48ae-b8bf-d5986eac49b7&quot;&gt;
+    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;be04377a-7391-4dcf-b021-4b39893e967e&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;ab5264b3-345a-4697-a2d7-f1b6bcff14be&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;1&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;e39d7e08-31f2-4b3f-82ca-92778a4471b4&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;e746ac60-b369-4965-a7eb-b8d8ca783a15&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;SpeedController::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;058fabea-4324-440f-9e96-3f724a819687&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7cddad27-0746-4270-aeda-d9e760a982a7&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -180,7 +181,7 @@
         &lt;identifier&gt;_task0&lt;/identifier&gt;
         &lt;priority&gt;40&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;53afe642-41d5-410d-a668-64bba79a673d&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;9929e27e-6015-4992-8f8b-492a52012b1f&quot;&gt;
         &lt;clockIdentifier&gt;SpeedController::defaultTimer&lt;/clockIdentifier&gt;
         &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
@@ -191,10 +192,10 @@
     <userSpecifiedFixedStepSize>.001</userSpecifiedFixedStepSize>
     <varSigHier>,,</varSigHier>
     <zeroInternalMemoryAtStartupUnchecked>true</zeroInternalMemoryAtStartupUnchecked>
-    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="2be61ca1-dbcc-4f91-a752-d87ffe5ad066"/>
-    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="e8ca55b0-788c-4a88-b506-1bef547b77f4"/>
-    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="ba9320f5-9352-44b6-aacf-a969e17a4b05"/>
-    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="512fb50c-0f65-486a-8032-f5a356238e0e">
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="bf2a3d51-05e2-4b56-a191-db9a29b34f2f"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="32f43a71-3f22-4f54-9a87-2761c279e282"/>
+    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="979cb300-ef0e-4581-861c-ec33928071b9"/>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="f22a631a-3430-4432-8870-e4abafd708f2">
       <consistentOutportInitialization>true</consistentOutportInitialization>
       <dateTimeAtTZero>0.0</dateTimeAtTZero>
       <dateTimeAtTZero>0.0</dateTimeAtTZero>
@@ -210,7 +211,7 @@
       <solverName>FixedStepDiscrete</solverName>
       <solverType>SOLVER_TYPE_FIXEDSTEP</solverType>
       <useDivForNetSlopComp>2</useDivForNetSlopComp>
-      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="66bd4355-01da-4141-a6bd-e2efbefd9c19">
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="2767899f-bb32-47c9-9cc4-4ac99b16e72e">
         <prodBitPerChar>8</prodBitPerChar>
         <prodBitPerDouble>64</prodBitPerDouble>
         <prodBitPerFloat>32</prodBitPerFloat>
@@ -222,14 +223,13 @@
         <prodBitPerShort>16</prodBitPerShort>
         <prodBitPerSizeT>16</prodBitPerSizeT>
         <prodEndianess>1</prodEndianess>
-        <prodLargestAtomicFloat>2</prodLargestAtomicFloat>
         <prodShiftRight>true</prodShiftRight>
         <prodWordSize>16</prodWordSize>
       </hardwareSettings>
     </configSettingsForConsistencyChecks>
-    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="1ca96acd-62f6-41b5-9b2c-6e0d49c0cfc9"/>
-    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="3c3924ad-c6ae-45d8-bbab-ba8d18ab4467"/>
-    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="c95be286-57cd-417c-9bba-a214c633ceb0">
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="bfa7b797-241f-46cf-8c8e-67484d0dd717"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="03af7963-1b0b-40da-9752-9da6a282e883"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="36b41977-d445-4d76-8a60-a63803304979">
       <compDataInputPorts>0</compDataInputPorts>
       <compDataInputPorts>1</compDataInputPorts>
       <compDataOutputPorts>0</compDataOutputPorts>
@@ -239,66 +239,53 @@
       <dataOutputPorts>0</dataOutputPorts>
       <dataOutputPorts>1</dataOutputPorts>
     </dataPortGroup>
-    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="ab68c97e-e75a-4942-8b58-3e07c72797c9"/>
-    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="e8da90af-4d01-4371-adab-b587c2a957d2">
-      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="7d9c5de2-e0f0-41d6-adc6-2ba2e0e4271f">
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-        <isUsed>true</isUsed>
-        <netSVCE>true</netSVCE>
-        <numDimensions>2</numDimensions>
-        <parameterName>Ki_speed</parameterName>
-      </globalVariables>
-      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="0a6a1778-dee2-4ec7-8064-b7126041a5dd">
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-        <isUsed>true</isUsed>
-        <netSVCE>true</netSVCE>
-        <numDimensions>2</numDimensions>
-        <parameterName>Kp_speed</parameterName>
-      </globalVariables>
-    </interfaceParameterInfo>
-    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="87c81961-0b4f-4669-9367-31b2421d8593"/>
-    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="adef6d77-40e8-42fe-bee1-d6bc9061dd00"/>
-    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="c933882e-6878-41d9-9706-8ecdd7b202c1"/>
-    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="6bf5074b-36e7-4fa4-a503-9cd46256d856">
-      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="02100c85-5431-46fe-9c12-5ee8b9db6d05"/>
-      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="8aeadb77-b29a-496f-bba7-e762546b2c95"/>
-      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="ac4f99f6-c714-44d6-abfd-6d402293ad88"/>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="695ef346-3b10-45f8-a02d-7f8a12b4238a"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="1ce193cb-70c0-4c29-8cfc-476fde67210b"/>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="25585112-47cb-4450-a1ca-c41004eace02"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="f6a771b8-dd71-4506-89bd-7a66f63fddf1"/>
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="56513465-a24f-4da9-864a-c8846db804a9"/>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="4a115a90-1dde-4793-9aa2-34c1f1603d84">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="bb69200f-139b-428b-9afe-d99ce518f251"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="7491fa43-c130-41ee-93bc-22d38c567b80"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="6f9ff8af-aca9-4e36-b3e4-120e6e14db07"/>
     </portGroupsRequireSameRate>
-    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="a419ac26-5450-4f41-97cd-96721dfd44e3"/>
-    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="85fc912b-2121-45ff-9e7c-86f3cbc581c9"/>
-    <rootBlockDiagramInterface type="ci.Model" uuid="5b567119-0cf3-428b-9781-4ade184293ea">
-      <p_RootComponentInterface type="ci.ComponentInterface" uuid="3ee48297-6a1e-4a38-b8d1-f155bbef715b">
-        <p_InputPorts type="ci.SignalInterface" uuid="d7ae371e-534e-4f8d-942f-6d9e0da04f09">
+    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="669bc743-4ca0-4876-8b71-454230e6eb9b"/>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="0b74a08a-ad1f-43fb-b556-9988b5864b18"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="b492bed9-c92a-46d4-90b5-5c3b3b4ee785">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="147c2a90-a540-4791-8ef5-1efdb24e62c1">
+        <p_InputPorts type="ci.SignalInterface" uuid="60ea7c3c-e317-4335-b80a-4f1492cc7133">
           <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
           <p_ComputedSampleTime>.001</p_ComputedSampleTime>
           <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
           <p_Name>Speed_ref</p_Name>
         </p_InputPorts>
-        <p_InputPorts type="ci.SignalInterface" uuid="2751b203-da8a-4e12-99e6-0de20366921e">
+        <p_InputPorts type="ci.SignalInterface" uuid="d83f2982-f941-4fe0-b367-84d3a31001ae">
           <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
           <p_ComputedSampleTime>.001</p_ComputedSampleTime>
           <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
           <p_Name>Real_Speed</p_Name>
         </p_InputPorts>
         <p_Name>SpeedController</p_Name>
-        <p_OutputPorts type="ci.SignalInterface" uuid="92c9783f-8de1-4e7d-bc1f-0669729d4d63">
+        <p_OutputPorts type="ci.SignalInterface" uuid="66f1020b-687f-4815-89bc-35ec12b800c2">
           <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
           <p_ComputedSampleTime>.001</p_ComputedSampleTime>
           <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
           <p_Name>Iq_ref</p_Name>
         </p_OutputPorts>
-        <p_OutputPorts type="ci.SignalInterface" uuid="9c52c59c-12a5-4d1e-ab66-5867d94f274c">
+        <p_OutputPorts type="ci.SignalInterface" uuid="d281612b-8e13-497b-bf88-cc8016911293">
           <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
           <p_ComputedSampleTime>.001</p_ComputedSampleTime>
           <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
           <p_Name>Speed_Error</p_Name>
         </p_OutputPorts>
         <p_Type>ROOT</p_Type>
       </p_RootComponentInterface>
     </rootBlockDiagramInterface>
-    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="89b1a283-a4bd-4bf0-a243-2be52ed5b41e">
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="0abd064b-202f-4647-98db-009cabfc8300">
       <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
     </simulinkFunctions>
     <sltpContext type="sltp.mm.core.Context" uuid="fc844811-c13f-42bf-9c87-64a619b631b0">
@@ -364,19 +351,19 @@
         </subgraph>
       </rootTask>
     </sltpContext>
-    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="273b5874-41c1-4496-b992-431b68823089"/>
-    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="996a56c8-dfda-4f74-9836-2191a17e13bb">
-      <dataSets type="sto.ClientClockNamedDataSet" uuid="4d19d189-924d-496a-8bd9-6d21295dffa3">
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="7975fa80-b29d-4c95-902b-f661d790203e"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="939e0ab7-04a4-49b3-b16e-f35ca77db2e2">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="01ec03c2-e79e-4e8b-9900-3febeab681ff">
         <tag>sltpEvents</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="7a0e3c45-edc9-4f39-b061-3501da8e9a69">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="f92ad895-2cb1-47e3-b75b-486ad382ef66">
         <tag>sltpTaskGroups</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="0b35a6f4-e300-458b-b4c1-f2536d3e24f3">
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="7f4b7347-919b-4f67-9a30-7528f30f8dc2"/>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="7f4b7347-919b-4f67-9a30-7528f30f8dc2">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="09e0242d-3fc3-4a13-942c-133ac69e8403">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="05bc70be-e144-4a31-8425-ef32cd7dc63c"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="05bc70be-e144-4a31-8425-ef32cd7dc63c">
           <dataName>D1</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="0b35a6f4-e300-458b-b4c1-f2536d3e24f3"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="09e0242d-3fc3-4a13-942c-133ac69e8403"/>
           <id type="sto.TaskHierarchyElementId">
             <clockId>SpeedController::defaultTimer</clockId>
             <id>_task0</id>
@@ -385,6 +372,6 @@
         <tag>sltpTasks</tag>
       </dataSets>
     </stoClientDataRegistry>
-    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="bb942d03-b54c-4a2b-bf0c-245b86933f75"/>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="e29e2aca-bf2f-4026-bbb8-00dfc6e34abd"/>
   </ModelRefInfoRepo.ModelRefInfoRoot>
 </MF0>

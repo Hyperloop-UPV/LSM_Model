@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Current_Controller'.
 //
-// Model version                  : 1.19
+// Model version                  : 1.26
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Wed Jun  3 13:06:34 2026
+// C/C++ source code generated on : Thu Jun  4 16:58:50 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -23,41 +23,53 @@
 
 static Current_Controller rtObj;       // Instance of model class
 
-// '<Root>/Iabc'
-static std::array<double, 3> arg_Iabc{ { 0.0, 0.0, 0.0 } };
+// '<Root>/Ia'
+static float arg_Ia{ 0.0F };
 
-// '<Root>/Init_Angle'
-static double arg_Init_Angle{ 0.0 };
+// '<Root>/Ib'
+static float arg_Ib{ 0.0F };
+
+// '<Root>/Ic'
+static float arg_Ic{ 0.0F };
 
 // '<Root>/Iq_ref'
-static double arg_Iq_ref{ 0.0 };
+static float arg_Iq_ref{ 0.0F };
+
+// '<Root>/Init_Angle'
+static float arg_Init_Angle{ 0.0F };
 
 // '<Root>/pos_speetec'
-static double arg_pos_speetec{ 0.0 };
+static float arg_pos_speetec{ 0.0F };
 
-// '<Root>/Vabc'
-static std::array<double, 3> arg_Vabc;
+// '<Root>/Va'
+static float arg_Va;
+
+// '<Root>/Vb'
+static float arg_Vb;
+
+// '<Root>/Vc'
+static float arg_Vc;
 
 // '<Root>/ELE angle'
-static double arg_ELE_angle;
-
-// '<Root>/Vd'
-static double arg_Vd;
+static float arg_ELE_angle;
 
 // '<Root>/Vq'
-static double arg_Vq;
+static float arg_Vq;
+
+// '<Root>/Vd'
+static float arg_Vd;
 
 // '<Root>/Iq_error'
-static double arg_Iq_error;
+static float arg_Iq_error;
 
 // '<Root>/Id_error'
-static double arg_Id_error;
+static float arg_Id_error;
 
 // '<Root>/Iq_measured'
-static double arg_Iq_measured;
+static float arg_Iq_measured;
 
 // '<Root>/Id_measured'
-static double arg_Id_measured;
+static float arg_Id_measured;
 
 //
 // Associating rt_OneStep with a real-time clock or interrupt service routine
@@ -89,8 +101,8 @@ void rt_OneStep(void)
   // Set model inputs here
 
   // Step the model
-  rtObj.step(&arg_Iabc[0], arg_Init_Angle, arg_Iq_ref, arg_pos_speetec,
-             &arg_Vabc[0], arg_ELE_angle, arg_Vd, arg_Vq, arg_Iq_error,
+  rtObj.step(arg_Ia, arg_Ib, arg_Ic, arg_Iq_ref, arg_Init_Angle, arg_pos_speetec,
+             arg_Va, arg_Vb, arg_Vc, arg_ELE_angle, arg_Vq, arg_Vd, arg_Iq_error,
              arg_Id_error, arg_Iq_measured, arg_Id_measured);
 
   // Get model outputs here

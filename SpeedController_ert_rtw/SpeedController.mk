@@ -2,7 +2,7 @@
 ## Makefile generated for component 'SpeedController'. 
 ## 
 ## Makefile     : SpeedController.mk
-## Generated on : Wed Jun 03 13:09:40 2026
+## Generated on : Wed Jun 03 20:53:11 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/SpeedController
 ## Product type : executable
 ## 
@@ -21,7 +21,7 @@ MAKEFILE                  = SpeedController.mk
 MATLAB_ROOT               = /usr/local/MATLAB/R2025b
 MATLAB_BIN                = /usr/local/MATLAB/R2025b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/glnxa64
-START_DIR                 = /home/osganig/Hyperloop/Traction-H9-main/LSM_Model
+START_DIR                 = /home/osganig/Hyperloop/LSM_Model
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

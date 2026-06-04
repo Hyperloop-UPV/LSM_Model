@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'SpeedController'.
 //
-// Model version                  : 1.15
+// Model version                  : 1.16
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Wed Jun  3 13:09:37 2026
+// C/C++ source code generated on : Thu Jun  4 18:26:32 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -22,16 +22,16 @@
 static SpeedController SpeedController_Obj;// Instance of model class
 
 // '<Root>/Speed_ref'
-static double arg_Speed_ref{ 0.0 };
+static float arg_Speed_ref{ 0.0F };
 
 // '<Root>/Real_Speed'
-static double arg_Real_Speed{ 0.0 };
-
-// '<Root>/Speed_Error'
-static double arg_Speed_Error;
+static float arg_Real_Speed{ 0.0F };
 
 // '<Root>/Iq_ref'
-static double arg_Iq_ref;
+static float arg_Iq_ref;
+
+// '<Root>/Speed_Error'
+static float arg_Speed_Error;
 
 //
 // Associating rt_OneStep with a real-time clock or interrupt service routine
@@ -63,8 +63,8 @@ void rt_OneStep(void)
   // Set model inputs here
 
   // Step the model
-  SpeedController_Obj.step(arg_Speed_Error, arg_Speed_ref, arg_Real_Speed,
-    arg_Iq_ref);
+  arg_Iq_ref = SpeedController_Obj.step(arg_Speed_ref, arg_Real_Speed,
+    arg_Speed_Error);
 
   // Get model outputs here
 
