@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'SpeedController'.
 //
-// Model version                  : 1.16
+// Model version                  : 1.17
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Thu Jun  4 18:26:32 2026
+// C/C++ source code generated on : Thu Jun  4 19:36:56 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -27,40 +27,43 @@ struct DW_SpeedController_T {
 };
 
 // Class declaration for model SpeedController
-class SpeedController final
+namespace MATLAB
 {
-  // public data and function members
- public:
-  // Copy Constructor
-  SpeedController(SpeedController const&) = delete;
+  class SpeedControl final
+  {
+    // public data and function members
+   public:
+    // Copy Constructor
+    SpeedControl(SpeedControl const&) = delete;
 
-  // Assignment Operator
-  SpeedController& operator= (SpeedController const&) & = delete;
+    // Assignment Operator
+    SpeedControl& operator= (SpeedControl const&) & = delete;
 
-  // Move Constructor
-  SpeedController(SpeedController &&) = delete;
+    // Move Constructor
+    SpeedControl(SpeedControl &&) = delete;
 
-  // Move Assignment Operator
-  SpeedController& operator= (SpeedController &&) = delete;
+    // Move Assignment Operator
+    SpeedControl& operator= (SpeedControl &&) = delete;
 
-  // Block states
-  DW_SpeedController_T SpeedController_DW;
+    // Block states
+    DW_SpeedController_T SpeedController_DW;
 
-  // model initialize function
-  static void initialize();
+    // model initialize function
+    static void initialize();
 
-  // model step function
-  float step(float arg_Speed_ref, float arg_Real_Speed, float &arg_Speed_Error);
+    // model step function
+    float step(float arg_Speed_ref, float arg_Real_Speed, float &arg_Speed_Error);
 
-  // model terminate function
-  static void terminate();
+    // model terminate function
+    static void terminate();
 
-  // Constructor
-  SpeedController();
+    // Constructor
+    SpeedControl();
 
-  // Destructor
-  ~SpeedController();
-};
+    // Destructor
+    ~SpeedControl();
+  };
+}
 
 //-
 //  These blocks were eliminated from the model due to optimizations:

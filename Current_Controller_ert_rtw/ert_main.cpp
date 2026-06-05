@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Current_Controller'.
 //
-// Model version                  : 1.26
+// Model version                  : 1.28
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Thu Jun  4 16:58:50 2026
+// C/C++ source code generated on : Thu Jun  4 19:42:28 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -21,7 +21,7 @@
 #include <stdio.h>              // This example main program uses printf/fflush
 #include "Current_Controller.h"        // Model header file
 
-static Current_Controller rtObj;       // Instance of model class
+static MATLAB::CurrentControl rtObj;   // Instance of model class
 
 // '<Root>/Ia'
 static float arg_Ia{ 0.0F };

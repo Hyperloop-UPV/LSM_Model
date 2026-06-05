@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Current_Controller'.
 //
-// Model version                  : 1.26
+// Model version                  : 1.28
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Thu Jun  4 16:58:50 2026
+// C/C++ source code generated on : Thu Jun  4 19:42:28 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -24,50 +24,53 @@
 #include <stdint.h>
 
 // Class declaration for model Current_Controller
-class Current_Controller final
+namespace MATLAB
 {
-  // public data and function members
- public:
-  // Block signals and states (default storage) for system '<Root>'
-  struct DW {
-    float Integrator_DSTATE;           // '<S44>/Integrator'
-    float Integrator_DSTATE_i;         // '<S97>/Integrator'
+  class CurrentControl final
+  {
+    // public data and function members
+   public:
+    // Block signals and states (default storage) for system '<Root>'
+    struct DW {
+      float Integrator_DSTATE;         // '<S44>/Integrator'
+      float Integrator_DSTATE_i;       // '<S97>/Integrator'
+    };
+
+    // Copy Constructor
+    CurrentControl(CurrentControl const&) = delete;
+
+    // Assignment Operator
+    CurrentControl& operator= (CurrentControl const&) & = delete;
+
+    // Move Constructor
+    CurrentControl(CurrentControl &&) = delete;
+
+    // Move Assignment Operator
+    CurrentControl& operator= (CurrentControl &&) = delete;
+
+    // Block states
+    DW rtDW;
+
+    // model initialize function
+    static void initialize();
+
+    // model step function
+    void step(float arg_Ia, float arg_Ib, float arg_Ic, float arg_Iq_ref, float
+              arg_Init_Angle, float arg_pos_speetec, float &arg_Va, float
+              &arg_Vb, float &arg_Vc, float &arg_ELE_angle, float &arg_Vq, float
+              &arg_Vd, float &arg_Iq_error, float &arg_Id_error, float
+              &arg_Iq_measured, float &arg_Id_measured);
+
+    // model terminate function
+    static void terminate();
+
+    // Constructor
+    CurrentControl();
+
+    // Destructor
+    ~CurrentControl();
   };
-
-  // Copy Constructor
-  Current_Controller(Current_Controller const&) = delete;
-
-  // Assignment Operator
-  Current_Controller& operator= (Current_Controller const&) & = delete;
-
-  // Move Constructor
-  Current_Controller(Current_Controller &&) = delete;
-
-  // Move Assignment Operator
-  Current_Controller& operator= (Current_Controller &&) = delete;
-
-  // Block states
-  DW rtDW;
-
-  // model initialize function
-  static void initialize();
-
-  // model step function
-  void step(float arg_Ia, float arg_Ib, float arg_Ic, float arg_Iq_ref, float
-            arg_Init_Angle, float arg_pos_speetec, float &arg_Va, float &arg_Vb,
-            float &arg_Vc, float &arg_ELE_angle, float &arg_Vq, float &arg_Vd,
-            float &arg_Iq_error, float &arg_Id_error, float &arg_Iq_measured,
-            float &arg_Id_measured);
-
-  // model terminate function
-  static void terminate();
-
-  // Constructor
-  Current_Controller();
-
-  // Destructor
-  ~Current_Controller();
-};
+}
 
 //-
 //  These blocks were eliminated from the model due to optimizations:

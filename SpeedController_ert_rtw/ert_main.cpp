@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'SpeedController'.
 //
-// Model version                  : 1.16
+// Model version                  : 1.17
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Thu Jun  4 18:26:32 2026
+// C/C++ source code generated on : Thu Jun  4 19:36:56 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -19,7 +19,7 @@
 #include <stdio.h>              // This example main program uses printf/fflush
 #include "SpeedController.h"           // Model header file
 
-static SpeedController SpeedController_Obj;// Instance of model class
+static MATLAB::SpeedControl SpeedController_Obj;// Instance of model class
 
 // '<Root>/Speed_ref'
 static float arg_Speed_ref{ 0.0F };
