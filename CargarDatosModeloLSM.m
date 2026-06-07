@@ -19,6 +19,7 @@ force_drag_vec(1,1:end) = 0; % Add 0 to the first column for Vel = 0;
 
 
 %% Other constants
+Ts_Matlab_Model = 1e-5;
 hems_n = 4;
 mass = 250;
 max_current = 100;

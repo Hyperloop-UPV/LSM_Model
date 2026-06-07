@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Current_Controller'.
 //
-// Model version                  : 1.28
+// Model version                  : 1.33
 // Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
-// C/C++ source code generated on : Thu Jun  4 19:42:28 2026
+// C/C++ source code generated on : Fri Jun  5 16:25:34 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: STMicroelectronics->ST10/Super10
@@ -64,7 +64,8 @@ namespace MATLAB
     &arg_Vd, float &arg_Iq_error, float &arg_Id_error, float &arg_Iq_measured,
     float &arg_Id_measured)
   {
-    double rtb_MathFunction;
+    double rtb_Divide;
+    double rtb_Divide_p;
     float rtb_dq0_tmp_1[9];
     float rtb_Sum_n_0[3];
     float Integrator;
@@ -73,6 +74,7 @@ namespace MATLAB
     float b_idx_2;
     float rtb_dq0_tmp;
     float rtb_dq0_tmp_0;
+    float rtb_dq0_tmp_idx_0;
     float tmp;
     int16_t b_idx_2_tmp;
     int16_t i;
@@ -85,30 +87,30 @@ namespace MATLAB
     //   Constant: '<S2>/Pole Pitch'
     //   Inport: '<Root>/pos_speetec'
 
-    rtb_MathFunction = arg_pos_speetec / 0.096;
+    rtb_Divide = arg_pos_speetec / 0.096;
 
-    // Math: '<S6>/Math Function' incorporates:
+    // Math: '<S7>/Math Function' incorporates:
     //   Constant: '<S2>/Poles'
-    //   Constant: '<S6>/Constant'
+    //   Constant: '<S7>/Constant'
     //   Gain: '<S2>/Gain'
-    //   Gain: '<S6>/PI_Number'
+    //   Gain: '<S7>/PI_Number'
     //   Inport: '<Root>/Init_Angle'
     //   Product: '<S2>/Divide1'
     //   Rounding: '<S2>/Round'
     //   Sum: '<S2>/Sum'
-    //   Sum: '<S6>/Sum'
+    //   Sum: '<S7>/Sum'
 
-    rtb_MathFunction = rt_modd((rtb_MathFunction - std::floor(rtb_MathFunction /
-      2.0) * 2.0) * 3.1415926535897931 + arg_Init_Angle, 6.2831853071795862);
+    rtb_Divide_p = rt_modd((rtb_Divide - std::floor(rtb_Divide / 2.0) * 2.0) *
+      3.1415926535897931 + arg_Init_Angle, 6.2831853071795862);
 
     // MATLAB Function: '<S1>/Clarke to Park Angle Transform' incorporates:
-    //   DataTypeConversion: '<S6>/Cast'
+    //   DataTypeConversion: '<S7>/Cast'
     //   MATLAB Function: '<S5>/Inverse Park Transform'
 
-    rtb_dq0_tmp = std::cos(static_cast<float>(rtb_MathFunction));
-    rtb_dq0_tmp_0 = std::sin(static_cast<float>(rtb_MathFunction));
+    rtb_dq0_tmp = std::cos(static_cast<float>(rtb_Divide_p));
+    rtb_dq0_tmp_0 = std::sin(static_cast<float>(rtb_Divide_p));
 
-    // SignalConversion generated from: '<S7>/ SFunction ' incorporates:
+    // SignalConversion generated from: '<S8>/ SFunction ' incorporates:
     //   Inport: '<Root>/Ia'
     //   Inport: '<Root>/Ib'
     //   Inport: '<Root>/Ic'
@@ -166,20 +168,20 @@ namespace MATLAB
       arg_Iq_measured += rtb_dq0_tmp_1[3 * i + 1] * tmp;
     }
 
-    // DiscreteIntegrator: '<S44>/Integrator' incorporates:
+    // DiscreteIntegrator: '<S45>/Integrator' incorporates:
     //   Constant: '<Root>/Constant'
-    //   Gain: '<S41>/Integral Gain'
+    //   Gain: '<S42>/Integral Gain'
     //   MATLAB Function: '<S1>/Clarke to Park Angle Transform'
     //   Sum: '<Root>/Sum2'
 
     b_idx_2 = (0.0F - arg_Id_measured) * 1210.8866F * 0.0001F;
 
-    // DiscreteIntegrator: '<S44>/Integrator'
+    // DiscreteIntegrator: '<S45>/Integrator'
     Integrator = b_idx_2 + rtDW.Integrator_DSTATE;
 
-    // Sum: '<S53>/Sum' incorporates:
+    // Sum: '<S54>/Sum' incorporates:
     //   Constant: '<Root>/Constant'
-    //   Gain: '<S49>/Proportional Gain'
+    //   Gain: '<S50>/Proportional Gain'
     //   MATLAB Function: '<S1>/Clarke to Park Angle Transform'
     //   Sum: '<Root>/Sum2'
 
@@ -191,38 +193,34 @@ namespace MATLAB
 
     arg_Iq_error = arg_Iq_ref - arg_Iq_measured;
 
-    // DiscreteIntegrator: '<S97>/Integrator' incorporates:
-    //   Gain: '<S94>/Integral Gain'
+    // DiscreteIntegrator: '<S98>/Integrator' incorporates:
+    //   Gain: '<S95>/Integral Gain'
 
     b_idx_1 = 1486.2207F * arg_Iq_error * 0.0001F;
 
-    // DiscreteIntegrator: '<S97>/Integrator'
+    // DiscreteIntegrator: '<S98>/Integrator'
     Integrator_p = b_idx_1 + rtDW.Integrator_DSTATE_i;
 
     // Saturate: '<S4>/Saturation' incorporates:
-    //   Gain: '<S102>/Proportional Gain'
-    //   Sum: '<S106>/Sum'
+    //   Gain: '<S103>/Proportional Gain'
+    //   Sum: '<S107>/Sum'
 
     arg_Vq = std::fmax(12.1385422F * arg_Iq_error + Integrator_p, 0.0F);
 
     // MATLAB Function: '<S5>/Inverse Park Transform' incorporates:
-    //   DataTypeConversion: '<S6>/Cast'
+    //   DataTypeConversion: '<S7>/Cast'
 
     rtb_dq0_tmp_1[0] = rtb_dq0_tmp_0;
     rtb_dq0_tmp_1[3] = rtb_dq0_tmp;
     rtb_dq0_tmp_1[6] = 1.0F;
-    rtb_dq0_tmp_1[1] = std::sin(static_cast<float>(rtb_MathFunction) -
-      2.09439516F);
-    rtb_dq0_tmp_1[4] = std::cos(static_cast<float>(rtb_MathFunction) -
-      2.09439516F);
+    rtb_dq0_tmp_1[1] = std::sin(static_cast<float>(rtb_Divide_p) - 2.09439516F);
+    rtb_dq0_tmp_1[4] = std::cos(static_cast<float>(rtb_Divide_p) - 2.09439516F);
     rtb_dq0_tmp_1[7] = 1.0F;
-    rtb_dq0_tmp_1[2] = std::sin(static_cast<float>(rtb_MathFunction) +
-      2.09439516F);
-    rtb_dq0_tmp_1[5] = std::cos(static_cast<float>(rtb_MathFunction) +
-      2.09439516F);
+    rtb_dq0_tmp_1[2] = std::sin(static_cast<float>(rtb_Divide_p) + 2.09439516F);
+    rtb_dq0_tmp_1[5] = std::cos(static_cast<float>(rtb_Divide_p) + 2.09439516F);
     rtb_dq0_tmp_1[8] = 1.0F;
 
-    // SignalConversion generated from: '<S115>/ SFunction ' incorporates:
+    // SignalConversion generated from: '<S116>/ SFunction ' incorporates:
     //   Constant: '<S5>/Constant'
     //   MATLAB Function: '<S5>/Inverse Park Transform'
 
@@ -231,15 +229,47 @@ namespace MATLAB
     rtb_Sum_n_0[2] = 0.0F;
 
     // MATLAB Function: '<S5>/Inverse Park Transform'
-    arg_Va = 0.0F;
-    arg_Vb = 0.0F;
-    arg_Vc = 0.0F;
+    rtb_dq0_tmp_idx_0 = 0.0F;
+    rtb_dq0_tmp_0 = 0.0F;
+    rtb_dq0_tmp = 0.0F;
     for (i = 0; i < 3; i++) {
       tmp = rtb_Sum_n_0[i];
-      arg_Va += rtb_dq0_tmp_1[3 * i] * tmp;
-      arg_Vb += rtb_dq0_tmp_1[3 * i + 1] * tmp;
-      arg_Vc += rtb_dq0_tmp_1[3 * i + 2] * tmp;
+      rtb_dq0_tmp_idx_0 += rtb_dq0_tmp_1[3 * i] * tmp;
+      rtb_dq0_tmp_0 += rtb_dq0_tmp_1[3 * i + 1] * tmp;
+      rtb_dq0_tmp += rtb_dq0_tmp_1[3 * i + 2] * tmp;
     }
+
+    // Product: '<S6>/Divide' incorporates:
+    //   Constant: '<S6>/Constant'
+    //   MATLAB Function: '<S5>/Inverse Park Transform'
+    //   MinMax: '<S6>/Min'
+    //   MinMax: '<S6>/Min1'
+    //   Sum: '<S6>/Sum'
+
+    rtb_Divide = (std::fmax(std::fmax(rtb_dq0_tmp_idx_0, rtb_dq0_tmp_0),
+      rtb_dq0_tmp) + std::fmin(std::fmin(rtb_dq0_tmp_idx_0, rtb_dq0_tmp_0),
+      rtb_dq0_tmp)) / 2.0;
+
+    // Outport: '<Root>/Va' incorporates:
+    //   DataTypeConversion: '<Root>/Cast'
+    //   MATLAB Function: '<S5>/Inverse Park Transform'
+    //   Sum: '<S6>/Sum1'
+
+    arg_Va = static_cast<float>(rtb_dq0_tmp_idx_0 - rtb_Divide);
+
+    // Outport: '<Root>/Vb' incorporates:
+    //   DataTypeConversion: '<Root>/Cast'
+    //   MATLAB Function: '<S5>/Inverse Park Transform'
+    //   Sum: '<S6>/Sum1'
+
+    arg_Vb = static_cast<float>(rtb_dq0_tmp_0 - rtb_Divide);
+
+    // Outport: '<Root>/Vc' incorporates:
+    //   DataTypeConversion: '<Root>/Cast'
+    //   MATLAB Function: '<S5>/Inverse Park Transform'
+    //   Sum: '<S6>/Sum1'
+
+    arg_Vc = static_cast<float>(rtb_dq0_tmp - rtb_Divide);
 
     // Outport: '<Root>/Id_error' incorporates:
     //   Constant: '<Root>/Constant'
@@ -249,14 +279,14 @@ namespace MATLAB
     arg_Id_error = 0.0F - arg_Id_measured;
 
     // Outport: '<Root>/ELE angle' incorporates:
-    //   DataTypeConversion: '<S6>/Cast'
+    //   DataTypeConversion: '<S7>/Cast'
 
-    arg_ELE_angle = static_cast<float>(rtb_MathFunction);
+    arg_ELE_angle = static_cast<float>(rtb_Divide_p);
 
-    // Update for DiscreteIntegrator: '<S44>/Integrator'
+    // Update for DiscreteIntegrator: '<S45>/Integrator'
     rtDW.Integrator_DSTATE = b_idx_2 + Integrator;
 
-    // Update for DiscreteIntegrator: '<S97>/Integrator'
+    // Update for DiscreteIntegrator: '<S98>/Integrator'
     rtDW.Integrator_DSTATE_i = b_idx_1 + Integrator_p;
   }
 
